@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const db = require('./db/db.json');
+const db_notes = require('./db/db.json');
 
 // Express server
 const app = express();
@@ -21,6 +21,14 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/notes', function (req, res) {
   res.sendFile(path.join(__dirname, './public/notes.html'));
 });
+
+
+// Returns saved notes in JSON format
+
+app.get('/api/notes', function (req, res) {
+  return res.json(db_notes);
+});
+
 
 
 
