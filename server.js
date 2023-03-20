@@ -44,6 +44,11 @@ app.post('api/notes/:id', function(req, res) {
 });
 
 
+app.delete('/api/notes/:id', function (req, res) {
+  const id = req.params.id;
+  
+}
+
 
 
 
