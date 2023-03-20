@@ -58,7 +58,7 @@ app.get('*', function (req, res) {
 
 // Runs server on local host port 3001
 app.listen(PORT, function () {
-  console.log('Running server on port ' + PORT);
+  console.log('Running server on port: ' + PORT);
 });
 
 
