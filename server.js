@@ -13,13 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-
-
 // Created route for notes.html file
 app.get('/notes', function (req, res) {
   res.sendFile(path.join(__dirname, './public/notes.html'));
 });
-
 
 // Returns saved notes in JSON format
 app.get('/api/notes', function (req, res) {
@@ -49,12 +46,6 @@ app.delete('/api/notes/:id', function (req, res) {
   }
   fs.writeFileSync('/db/db.json', JSON.stringify(db_notes));
   return res.json(id);
-});
-
-
-//
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 // Runs server on local host port 3001
