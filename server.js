@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const db_notes = require('./db/db.json');
 
-// Declaring variables needed to run server
+// Declaring variables needed to run
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -48,7 +48,12 @@ app.delete('/api/notes/:id', function (req, res) {
   return res.json(id);
 });
 
-// Runs server on local host port 3001
+// Route to return index.html file, similar to notes route syntax
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+// Runs server on localhost port 3001, use browser to view page
 app.listen(PORT, function () {
   console.log('Running server on port: ' + PORT);
 });

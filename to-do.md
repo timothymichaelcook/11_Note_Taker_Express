@@ -1,10 +1,16 @@
 To-do
 
-0. create server.js file
-1. api route
-2. front-end route (notes.html)
-3. delete route
-4. update readme
+1. create server.js file
+2. api route
+3. front-end route (notes.html)
+4. delete route (extra)
+5. update readme
+6. deploy to heroku
+7. submit project, deploy link, github link
+
+
+
+
 
 
 
