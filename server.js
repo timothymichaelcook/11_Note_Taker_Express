@@ -17,8 +17,10 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 
-
-
+// Created route for notes.html file
+app.get('/notes', function (req, res) {
+  res.sendFile(path.join(__dirname, './public/notes.html'));
+});
 
 
 
