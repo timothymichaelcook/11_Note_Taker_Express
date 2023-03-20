@@ -9,9 +9,10 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Parse data in JSON format
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
+
 
 
 // Created route for notes.html file
@@ -26,11 +27,11 @@ app.get('/api/notes', function (req, res) {
 });
 
 // 
-app.post('api/notes/:id', function(req, res) {
+app.post('/api/notes', function(req, res) {
   const notes = req.body;
   notes.id = new Date().getTime().toString();
   console.log(notes);
-  console.push(notes);
+  db.push(notes);
   fs.writeFile('./db/db.json', JSON.stringify(db_notes), (err) => {
     if (err) throw err;
     res.json(notes);
