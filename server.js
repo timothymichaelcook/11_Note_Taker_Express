@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const db_notes = require('./db/db.json');
 
-// Express server
+// Declaring variables needed to run server
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -23,7 +23,7 @@ app.get('/api/notes', function (req, res) {
   return res.json(db_notes);
 });
 
-// 
+// Route to create a new note
 app.post('/api/notes', function(req, res) {
   const notes = req.body;
   notes.id = new Date().getTime().toString();
