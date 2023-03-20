@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 
 
-// Data parsing
+// Parse data in JSON format
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
@@ -29,6 +29,19 @@ app.get('/api/notes', function (req, res) {
   return res.json(db_notes);
 });
 
+
+//
+
+app.post('api/notes/:id', function(req, res) {
+  const notes = req.body;
+  notes.id = new Date().getTime().toString();
+  console.log(notes);
+  console.push(notes);
+  fs.writeFile('./db/db.json', JSON.stringify(notesdb), (err) => {
+    if(err) throw err;
+    res.json(notes);
+  });
+});
 
 
 
