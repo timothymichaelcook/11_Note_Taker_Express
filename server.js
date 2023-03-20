@@ -31,7 +31,7 @@ app.post('/api/notes', function(req, res) {
   const notes = req.body;
   notes.id = new Date().getTime().toString();
   console.log(notes);
-  db.push(notes);
+  db_notes.push(notes);
   fs.writeFile('./db/db.json', JSON.stringify(db_notes), (err) => {
     if (err) throw err;
     res.json(notes);
