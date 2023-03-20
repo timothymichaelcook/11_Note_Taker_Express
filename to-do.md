@@ -1,15 +1,10 @@
-# 11_Note_Taker_Express
-
-
 To-do
 
-1. api routes
-2. front-end routes
-3. update readme
+0. create server.js file
+1. api route
+2. front-end route (notes.html)
+3. delete route
+4. update readme
 
 
 
-
-
-
-delete route extra credit
