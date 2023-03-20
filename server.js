@@ -21,9 +21,12 @@ const PORT = process.env.PORT || 3001;
 
 
 
+
+
+
 // Runs server on local host port 3001
 app.listen(PORT, function () {
-  console.log('Server running on port ' + PORT);
+  console.log('Running server on port ' + PORT);
 });
 
 
