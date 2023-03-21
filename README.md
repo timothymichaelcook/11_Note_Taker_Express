@@ -1,16 +1,14 @@
-
-
-
 # Note Taker
 
 Project Repo: [Github-repo](https://github.com/timothymichaelcook/11_Note_Taker_Express)
+Deployed Project: [Deployed-application](https://note-taker-express-cook.herokuapp.com/)
 
 
-## Description REDO
+## Description
 
-The focus of this project was to create an application in that runs in the terminal, gathers user data about employees based on their job title. Every employee will be asked to input their name, id and email. Specific employees will be asked questions based on their job title. For examples, engineers will be asked to provide their GitHub username while interns will be asked what school they attended. The output file will display the user input in one CSS container and multiple CSS cards.
+The focus of this project was to create a web application with a home page and note taking page. The home page displays a button which take you to a notes page. Users can create notes with a title and information, save notes as well as delete notes.
 
-## User Story REDO
+## User Story
 
 ```
 - AS A small business owner
@@ -18,16 +16,17 @@ The focus of this project was to create an application in that runs in the termi
 - SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ```
 
-## Installation REDO
+## Installation
 
-- Express package (for user prompts)
-- Jest package (for running tests)
+- Express NPM package (for running server)
 - npm i
-- node index.js
+- npm start
+- Browser to view the webpage (port 3001)
 
-## Usage REDO
+## Usage
 
-Users needs to be in the root folder of the project and 'npm i' or 'npm install' to install necessary dependencies. Once installed, users will need to run 'node index.js' to start the application in the terminal window. Once the user inputs the required fields, a prompt will ask if you would like to add another employee. If no, a file named team.html will be created in the dist directory. Open the html file in a browser to view the output file.
+Users needs to be in the root folder of the project and 'npm i' or 'npm install' to install necessary dependencies. Once installed, users will need to run 'npm start' to start the server on port 3001. 
+Open a browser and navigate to localhost/3001, click the button on the homepage. This will take the user to the notes page. Click the + icon to create a new note, fill out the title and description fields. Once done, click the save button and which will save the note in the left column. To delete a note, click the trash icon next to the note in the left column.
 
 ## Credits
 
@@ -39,8 +38,10 @@ MIT License
 
 ## Screenshots/Videos REDO
 
-![Project Walkthrough](./assets/challenge_10_walkthrough.gif)
-![Project Tests](./assets/challenge_10_test.gif)
+![Project Screenshot](./assets/screenshot_1.png)
+![Project Screenshot](./assets/screenshot_2.png)
+![Project Screenshot](./assets/screenshot_3.png)
+![Project Screenshot](./assets/screenshot_4.png)
 
 ## Contact
 Timothy Cook - timothy.michael.cook@gmail.com
